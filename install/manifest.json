@@ -1,0 +1,83 @@
+{
+	"version":"0.0.1",
+	"small_data_set":1,
+	"medium_data_set":1,
+	"large_data_set":1,
+	"include_locale_design":1,
+	"include_model_design":1,
+	"include_controller_design":1,
+	"id":"360",
+	"name":"documentation",
+	"license_agreement":null,
+	"description":"The documentation module provides information about maaxframe it has been done in a way to target different categories of audience. Users are also provided an option to add comments for adding relevant information to the topic description.",
+	"company":"Primary Modules",
+	"author":"Sanket Khanna",
+	"is_active":"1",
+	"created_by":null,
+	"modified_by":"1",
+	"owned_by":"1",
+	"created":"2013-11-22",
+	"modified":"2013-07-09 10:10:14",
+	"revision":null,
+	"flags":null,
+	"category_id":"7",
+	"industry_id":"2",
+	"latest_version":null,
+	"is_installed":"1",
+	"svn_repository":"https:\/\/primod.svn.cloudforge.com\/maaxapps\/trunk\/documentation",
+	"current_stable_version":"0",
+	"__created_by":"",
+	"__modified_by":"System Admin",
+	"modified_by_model":"modified_by_user",
+	"__owned_by":"System Admin",
+	"owned_by_model":"owned_by_user",
+	"__category_id":"IT & Administration",
+	"category_id_business_key":"IT & Administration",
+	"category_id_model":"module_categories",
+	"__industry_id":"General",
+	"industry_id_business_key":"General",
+	"industry_id_model":"module_industries",
+	"controllers":{
+		"comments":"\\module\\documentation\\controller\\comments",
+		"related_topics":"\\module\\documentation\\controller\\related_topics",
+		"topics":"\\module\\documentation\\controller\\topics"
+	},
+	"models":{
+		"comments_acl_cache":"\\module\\documentation\\model\\comments_acl_cache",
+		"comments_group_acl_cache":"\\module\\documentation\\model\\comments_group_acl_cache",
+		"comments":"\\module\\documentation\\model\\comments",
+		"related_topics":"\\module\\documentation\\model\\related_topics",
+		"topics_acl_cache":"\\module\\documentation\\model\\topics_acl_cache",
+		"topics_group_acl_cache":"\\module\\documentation\\model\\topics_group_acl_cache",
+		"topics":"\\module\\documentation\\model\\topics"
+	},
+	"dependencies":{
+		"module":{
+			"development_base":[
+				
+			],
+			"core":[
+				
+			],
+			"access_controls":{
+				"version":"1.0.3",
+				"company":"Primary Modules",
+				"author":"Tushar Takkar"
+			}
+		},
+		"model":{
+			"\\module\\access_controls\\model\\users":"\\module\\access_controls\\model\\users"
+		},
+		"controller":[
+			
+		],
+		"behaviour":{
+			"\\module\\core\\behaviour\\revision_log":"\\module\\core\\behaviour\\revision_log",
+			"\\module\\access_controls\\behaviour\\acl":"\\module\\access_controls\\behaviour\\acl",
+			"\\tushar\\behaviour\\tree":"\\tushar\\behaviour\\tree"
+		}
+	},
+	"role_based_groups":[
+		
+	]
+}

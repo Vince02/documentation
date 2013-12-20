@@ -1,0 +1,16 @@
+[
+	{
+		"id":"149",
+		"name":"access_controls",
+		"created_by":"1",
+		"modified_by":null,
+		"created":"2013-10-03 11:22:05",
+		"modified":null,
+		"deleted":"0",
+		"revision":"1",
+		"flags":null,
+		"owned_by":null,
+		"version":"1.0.2",
+		"module_id":"360"
+	}
+]
