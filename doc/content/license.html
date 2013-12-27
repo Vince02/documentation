@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Maaxframe Docs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="../assets/css/bootstrap.css" rel="stylesheet">
+        <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="../assets/css/docs.css" rel="stylesheet">
+        <link href="../assets/css/prettify.css" rel="stylesheet">
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="../assets/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-146052-10']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+        <!-- Navbar
+        ================================================== -->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">MaaxFrame</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Admin Guide</a></li>
+                           <!-- <li><a href="examples.html">Examples</a></li>
+                            <li><a href="tests/tests.html">Run Tests</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subhead
+        ================================================== -->
+        <header class="jumbotron subhead" id="overview">
+            <div class="container">
+                <h1>MaaxFrame Version 2.1</h1>
+                <p class="lead">This document targets the administrative user.  <a href="http://www.maaxframe.com/contactus.php"  target="_blank">Contact us</a> for any query.</p>
+            </div>
+        </header>
+
+
+        <div class="container">
+
+            <!-- Docs nav
+            ================================================== -->
+            <div class="row">
+                <div class="span3 bs-docs-sidebar">
+
+                    <div  >
+                        <div >
+                            <ul class="nav nav-list bs-docs-sidenav ">
+                                <li><label class="tree-toggler nav-header"><h4>Tabe of Contents</h4></label>
+                                <li class="divider"></li>
+                                <!--<li><label class="tree-toggler nav-header"><h4></h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#http-verbs">Intoduction</a></li>
+                                        <li><a href="#parameters">Parameters</a></li>
+                                        <li><a href="#post-login">Login</a></li>
+                                        <li><a href="#get-logout">Logout</a></li>
+                                    </ul>
+                                </li>-->
+                                <li><label class="tree-toggler nav-header"><a href="#"><h4>Introduction</h4></a></label>
+
+                                  <!--  <ul class="nav nav-list tree">
+                                        <li><a href="#get-list-view">Get List View</a></li>
+                                        <li><a href="#get-specific-list-view">Get Specific List View</a></li>
+                                        <li><a href="#get-form-view">Get Form View</a></li>
+                                        <li><a href="#get-form-metadata">Get Form Meta Data</a></li>
+                                        <li><a href="#get-specific-form-metadata">Get Specific Form Meta Data</a></li>
+                                        <li><a href="#get-specific-report">Get Report</a></li>
+                                        <li><a href="#paginate">Pagination</a></li>
+                                        <li><a href="#find">Find</a></li>
+                                        <li><a href="#merge_fields">Merge Fields</a></li>
+
+                                    </ul>-->
+                                      <ul class="nav nav-list tree">
+                                        <li><a href="../index.html">Overview</a></li>
+                                        <li><a href="../index.html">Core Admin</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                     <li><label class="tree-toggler nav-header"><a href="#"><h4>User Setting</h4></a></label>
+                                        <ul class="nav nav-list tree">
+                                        <li><a href="user_setting.html#Overview">Overview</a></li>
+                                        <li><a href="user_setting.html#Login">Login</a></li>
+                                        <li><a href="user_setting.html#Locale">Locale</a></li>
+                                        <li><a href="user_setting.html#User Info">User Info</a></li>
+                                    </ul>
+                                </li>
+
+                                
+                                <li><label class="tree-toggler nav-header"><a href="#"><h4>Access Controls</h4></a></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="access_control.html#User">User</a></li>
+                                        <li><a href="access_control.html#Roles">Roles</a></li>
+                                        <li><a href="access_control.html#Groups">Groups</a></li>
+                                       
+                                    </ul>
+                                </li><label class="tree-toggler nav-header"><a href="#"><h4>Licenses</h4></a></label>
+                                       <ul class="nav nav-list tree">
+                                        <li><a href="#License Management">License Management</a></li>
+                                        <li><a href="#License Creation">License Creation</a></li>
+                                        <li><a href="#Download Key">Download Key</a></li>
+                                       
+                                    </ul>
+                                </li>
+                               <!-- <li><label class="tree-toggler nav-header"><h4>2. </h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#ascending_sort">Ascending Sort</a></li>
+                                        <li><a href="#descending_sort">Descending Sort</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><label class="tree-toggler nav-header"><h4>CRUD Docs</h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#post-create">Create Record</a></li>
+                                        <li><a href="#put-update">Update Record</a></li>
+                                        <li><a href="#delete">Delete Record</a></li>
+                                        <li><a href="#bulk-delete">Bulk Delete Record</a></li>
+
+                                    </ul>
+                                </li>-->
+                             </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="span9">
+
+
+                    <!-- License Management
+                    ================================================== -->
+                    <section id="License Management">
+                        <div class="page-header">
+                            <h1>License Management</h1>
+                        </div>
+                        <p>
+                  The License Management page allows administrators to manage their MaaxFrame license properties. You can use this option to manage the MaaxFrame license for your organization and view information such as the download key, expiration date, number of users, etc. System administrators can also edit and re-validate the license via the License Management page. Please note that your commercial edition of MaaxFrame is purchased with a set number of licenses that allow users to access the application.
+                    <br>
+                    <br>
+                  <img src="../assets/img/1.png" alt="license management" />
+
+                  <br>
+                  <br>
+                   to see the licensing validity for a module you can open the form view of a particular module and you can see the start date and end date and days to expire 
+                        </p><br>
+                    </section>
+
+                     <!-- License Creation
+                    ================================================== -->
+                    <section id="License Creation">
+                        <div class="page-header">
+                            <h1>Creating a License</h1>
+                        </div>
+                        
+                          Navigate to the Settings -> Configuration -> User License.
+                    <br>
+                    <br>
+                    <img src="../assets/img/2.png" alt="license creation" />
+                    <br>
+                    <br> 
+                    Click on create new it will open up a license form. now select module name from the module drop down and select user for whom you want to create a license. now click submit. Again open the record in form view mode you will see the link for downloading license. click on download link it will download a .ml file 
+                    <br>
+                    <br>
+                    <img src="../assets/img/3.png" alt="license creation" />
+                    <br>
+
+                    to deploy the installed license just go to the module for which you have created license. open module in form view. Click on deploy and install license and you are done you will find the module information updated.   
+                       
+                    </section>
+
+                      <!-- Download Key
+                    ================================================== -->
+                    <section id="Download Key">
+                        <div class="page-header">
+                            <h1>Download Key</h1>
+                        </div>
+                        
+                        The download key is a 32 digit alphanumeric key that is unique to your MaaxFrame account. The number of user licenses your organization purchased, as well as the subscription expiration date is tied to your download key. Upon purchasing MaaxFrame, you will receive a Welcome email containing your download key information which will need to be entered during installation of the MaaxFrame application. Once the download key is entered in the system, the corresponding information such as the expiration date, number of users, number of offline client licenses, and number of concurrent self-service portal users will automatically populate and be displayed in Admin > License Management.
+
+                    
+                    </section>
+
+
+
+        <!-- Footer
+        ================================================== -->
+        <footer class="footer">
+            <div class="container">
+                <p>© MaaxFrame Inc. 2013 onwards - All rights reserved</p>
+            </div>
+        </footer>
+
+
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <script src="../assets/js/jquery.js"></script>
+        <script src="../assets/js/bootstrap-transition.js"></script>
+        <script src="../assets/js/bootstrap-alert.js"></script>
+        <script src="../assets/js/bootstrap-modal.js"></script>
+        <script src="../assets/js/bootstrap-dropdown.js"></script>
+        <script src="../assets/js/bootstrap-scrollspy.js"></script>
+        <script src="../assets/js/bootstrap-tab.js"></script>
+        <script src="../assets/js/bootstrap-tooltip.js"></script>
+        <script src="../assets/js/bootstrap-popover.js"></script>
+        <script src="../assets/js/bootstrap-button.js"></script>
+        <script src="../assets/js/bootstrap-collapse.js"></script>
+        <script src="../assets/js/bootstrap-carousel.js"></script>
+        <script src="../assets/js/bootstrap-typeahead.js"></script>
+        <script src="../assets/js/bootstrap-affix.js"></script>
+        <script src="../assets/js/bootbox.min.js"></script>
+        <script src="../assets/js/holder.js"></script>
+        <script src="../assets/js/prettify.js"></script>
+
+        <script src="../assets/js/application.js"></script>
+
+
+        <!-- Analytics
+        ================================================== -->
+        <script>
+            var _gauges = _gauges || [];
+            (function() {
+                var t = document.createElement('script');
+                t.type = 'text/javascript';
+                t.async = true;
+                t.id = 'gauges-tracker';
+                t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+                t.src = '//secure.gaug.es/track.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(t, s);
+            })();
+                
+                      
+        </script>
+        <script>$(document).ready(function () {
+            $('label.tree-toggler').click(function () {
+                $(this).parent().children('ul.tree').toggle(300);
+            });
+        });
+        $(document).ready(function () {
+            $('label.tree-toggler').parent().children('ul.tree').toggle(300);
+        });</script>
+
+    </body>
+</html>

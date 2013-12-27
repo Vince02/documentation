@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Maaxframe · API</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="assets/css/docs.css" rel="stylesheet">
+        <link href="assets/css/prettify.css" rel="stylesheet">
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+              <script src="assets/js/html5shiv.js"></script>
+            <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-146052-10']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+        <!-- Navbar
+            ================================================== -->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+
+                    <a class="brand" href="#">MaaxFrame</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li><a href="index.html">API References</a>
+                            </li>
+                            <li class="active"><a href="examples.html">Examples</a>
+                            </li>
+                            <li><a href="tests/tests.html">Run Tests</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subhead
+            ================================================== -->
+        <header class="jumbotron subhead" id="overview">
+            <div class="container">
+                <h1>MaaxFrame API</h1>
+                <p class="lead">This document describes the resources that make MaaxFrame accessible from client ends. <a href="http://www.maaxframe.com/contactus.php" target="_blank">Contact us</a> for any query.</p>
+            </div>
+        </header>
+
+
+        <div class="container">
+
+            <!-- Docs nav
+                ================================================== -->
+            <div class="row">
+                <div class="span3 bs-docs-sidebar">
+                    <div  >
+    <div >
+        <ul class="nav nav-list bs-docs-sidenav ">
+            <li><label class="tree-toggler nav-header"><a href="#prerequisite"><h4>Prerequisite</h4></a></label>
+            </li>
+            <li class="divider"></li>
+            <li><label class="tree-toggler nav-header"><h4>Core Docs</h4></label>
+                <ul class="nav nav-list tree">
+                <li><a href="#login">Login</a></li>
+                <li><a href="#logout">Logout</a></li>
+                </ul>
+            </li>
+            <li><label class="tree-toggler nav-header"><h4>Read Docs</h4></label>
+                    
+                <ul class="nav nav-list tree">
+                    <li><a href="#lead-listview">Leads List View</a></li>
+                    <li><a href="#specific-lead-listview">Specific Leads List View</a></li>
+                    <li><a href="#lead-form-view">Lead Form View</a></li>
+                    <li><a href="#lead-form-metadata">Lead Form Meta Data</a></li>
+                    <li><a href="#specific-form-metadata">Specific Form Meta Data</a></li>
+                    <li><a href="#specific-report">Report</a></li>
+                    <li><a href="#paginate">Pagination</a></li>
+                    <li><a href="#find">Find</a></li>
+                    <li><a href="#merge_fields">Merge Field</a></li>
+                    
+                </ul>
+            </li>
+             <li><label class="tree-toggler nav-header"><h4>Search Docs</h4></label>
+                        <ul class="nav nav-list tree">
+                            <li><a href="#basic-search">Basic Search</a></li>
+                            <li><a href="#inline-search">Inline Search</a></li>
+                            <li><a href="#advance-search">Advanced Search</a></li>
+                        </ul>
+                    </li>
+                    <li><label class="tree-toggler nav-header"><h4>Sort Docs</h4></label>
+                                <ul class="nav nav-list tree">
+                                    <li><a href="#ascending_sort">Ascending Sort</a></li>
+                                    <li><a href="#descending_sort">Descending Sort</a></li>
+                                  </ul>
+                            </li>
+                    <li><label class="tree-toggler nav-header"><h4>CRUD Docs</h4></label>
+                                <ul class="nav nav-list tree">
+                                    <li><a href="#create-lead">Create Lead</a></li>
+                                    <li><a href="#update-lead">Update Lead</a></li>
+                                    <li><a href="#delete-lead">Delete Lead</a></li>
+                                    <li><a href="#bulk-delete-lead">Bulk Delete Leads</a></li>
+                                    
+                                </ul>
+                            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+                </div>
+                <div class="span9">
+
+                    <!-- Prerequisite
+                                        ================================================== -->
+                    <section id="prerequisite">
+                        <div class="page-header">
+                            <h1>Prerequisite</h1>
+                        </div>
+                        <p>
+                        <h3>To run this page you need to disable your browser's web security.</h3><br>
+                        You can do this by closing your browser completely:
+                        <h4>For Windows machine\'s chrome browser:</h4>
+                        "C:\Program Files (x86)\Google\Chrome\Application>chrome --disable-web-security"<br>
+                        <h4>For Mac machine\'s chrome browser:</h4>
+                        "$ open -a Google\ Chrome --args --disable-web-security"<br>
+                        <h4>For Ubuntu machine\'s chromium browser:</h4>
+                        "$ chromium-browser --disable-web-security"'
+                        </p>
+                    </section>
+
+                    <!-- Login
+                         ================================================== -->
+                    <section id="login">
+                        <div class="page-header">
+                            <h1>Login</h1>
+                        </div>
+                        <p>In following way you can make REST call for login. Here we are showing working example to login Maaxframe. You can view this example of login REST call in snapshot which makes you login you as a user.</br>
+                            You are now logged in as user as you view this page.
+                        </p>
+                        <div>
+
+                        </div>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_login">
+                                        <h4>Rest call to login snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_login" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/login_call.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+
+                            <p>You can see the example of REST call for login and response in below snapshot.</p>
+                            <div class="accordion" id="accordion2">
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_allleads_response">
+                                            <h4>JSON Response of Login</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapse_allleads_response" class="accordion-body collapse">
+                                        <div class="accordion-inner">
+                                            <img src="assets/img/login_response.png">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <p>You need to put ".json" at the end of the url to get response in JSON format. In response you will get a cookie 'PHPSESSID', that you need to pass in all further calls.</p>
+                    </section>
+
+                    <!-- Logout
+                       ================================================== -->
+                    <section id="logout">
+                        <div class="page-header">
+                            <h1>Logout</h1></div>
+
+                        <p>In following way we can make REST call to logout a user from maaxframe. You can see the parameters you need to pass in snapshot.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_logout_rest">
+                                        <h4>REST call to logout snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_logout_rest" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/logout.png">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <p>Here we are showing a logout request, you need to pass '_method' parameter with value 'logout' as shown in example.</P>
+                        <!--h4>Click Logout button to Logout</h4>
+                        <button id="logout-btn" class="btn btn-large btn-primary" type="button">Logout</button-->
+                    </section>
+
+                    <!-- Leads List View
+                        ================================================== -->
+                    <section id="lead-listview">
+                        <div class="page-header">
+                            <h1>Leads List View</h1>
+                        </div>
+                        <p>In following way you can make REST call for getting all leads from Maaxframe. You can view example of REST call to get all leads in the snapshot. To get the list view data you can make a GET request as shown in example.
+                        <p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_allleads_call">
+                                        <h4>Rest call of all Leads snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_allleads_call" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/lead_list_view_call.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+
+                            <p>You can see the example of REST call to get all leads and JSON data that maaxframe returns in the key value pair in the snapshot.</p>
+                            <div class="accordion" id="accordion2">
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_allleads_response">
+                                            <h4>JSON Response of all leads</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapse_allleads_response" class="accordion-body collapse">
+                                        <div class="accordion-inner">
+                                            <img src="assets/img/lead_list_view_response.png">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        </br>
+                        <p>
+                            As you see this page a REST call is fired and in below table you can see the data coming from Maaxframe.
+                        </p>
+
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_allleads_table">
+                                        <h4>Lead records came from Maaxframe by this REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_allleads_table" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <div id="leadlistview">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </section>
+                    <!-- Specific Lead List View
+                        ================================================== -->
+                    <section id="specific-lead-listview">
+                        <div class="page-header">
+                            <h1>Specific Leads List View</h1></div>
+                        <p>In following way you can make a REST call To get data for a specific list view by it's id. For this you can make a GET request with a parameter 'current_listview' as view id. You can also do it by a POST call also with an extra parameter '_method' with value 'index'.</br></p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_specificlead_call">
+                                        <h4>Specific lead listview REST call snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_specificlead_call" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/specific_listview_call.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <p>Use the GET request with a parameter 'current_listview'. You can do it by a POST call also with an extra parameter '_method' with value 'index'.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_specific_response">
+                                        <h4>JSON response of REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_specific_response" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/specific_listview_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </section>
+
+
+                    <!-- Leads Form View
+                        ================================================== -->
+                    <section id="lead-form-view">
+                        <div class="page-header">
+                            <h1>Leads Form View</h1></div>
+                        <p>In following way You can make REST call To get the information of a lead, You can see the parameters that you need to pass.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_leadsform">
+                                        <h4>Lead form view REST call snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_leadsform" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/getcallleadrecord.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>You need to pass it's id (eg. id:[id_value]) with url as shown in example snapshot.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_leadsform_response">
+                                        <h4>JSON response of REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_leadsform_response" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/specific_listview_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+                    <!-- Leads Form Meta Data
+                        ================================================== -->
+                    <section id="lead-form-metadata">
+                        <div class="page-header">
+                            <h1>Leads Form Meta Data</h1></div>
+                        <p>In following way you can make a REST call to get meta data for a form. you can see parameters that we need to pass in snapshot.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_metadata">
+                                        <h4>Lead form Metadata REST call snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_metadata" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/lead_form_metadata.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>Use the POST request with '_method' parameter having value 'form' to the respective url.</P>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_matadata_response">
+                                        <h4>JSON response of REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_matadata_response" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/leadform_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- Specific Form Meta Data
+                        ================================================== -->
+                    <section id="specific-form-metadata">
+                        <div class="page-header">
+                            <h1>Specific Form Meta Data</h1></div>
+                        <p>In following way you can make a REST call to get meta data for a specific form you can use following parameters as shown in snapshot.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_specific_metadata">
+                                        <h4>Specific form meta data REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_specific_metadata" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/specific_form.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>Use the POST request with '_method' parameter having value 'form' and 'name' of the requested form to the respective url.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_specific_metadata_res">
+                                        <h4>JSON response of the REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_specific_metadata_res" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/specific_form_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <!-- Specific report
+                        ================================================== -->
+<section id="specific-report">
+                        <div class="page-header">
+                            <h1>Report</h1></div>
+                        <p>In following way you can make a REST call to get meta data for a specific report. You can use following parameters as shown in snapshot.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_specific_report">
+                                        <h4>Specific Report REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_specific_report" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/specific_report.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <p>Use post request. Pass a parameter '_method' with value '_report' along with an extra parameter 'current_report' whose value is the id of required report.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_specific_report_response">
+                                        <h4>JSON response of REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_specific_report_response" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/specific_report_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <!-- Leads Form View
+                        ================================================== -->
+                    <section id="paginate">
+                        <div class="page-header">
+                            <h1>Pagination</h1></div>
+                        <p>In following way you can make REST call to get the data from a specific page of a list view (say page 5 for leads), You can see the parameters that you need to pass in the example below.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_paginate">
+                                        <h4>REST call snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_paginate" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/paginate.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_paginate_response">
+                                        <h4>JSON response of REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_paginate_response" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/paginate_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+                    <!-- Find
+                        ================================================== -->
+                    <section id="find">
+                        <div class="page-header">
+                            <h1>Find</h1></div>
+
+                        <p>In following way you can make a REST call to perform find operation on model leads.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_find">
+                                        <h4>REST call for find operation</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_find" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/find.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>For this you need to pass a 'q' parameter as shown in example.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_find_response">
+                                        <h4>JSON response of REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_find_response" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/find_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <!--p><h4>Enter your search query and click submit.</h4></p>
+                            <form id="basicsearch" class="navbar-form pull-left">
+                                <input id="searchqueryinput" type="text" placeholder="Enter search query" value="Lila Short">
+                                <button style="margin-top: 5px"  class="btn search-btn-click">Submit</button>
+                            </form-->
+                        
+                    </section>
+                    
+                    <!-- Basic Search
+                        ================================================== -->
+                    <section id="basic-search">
+                        <div class="page-header">
+                            <h1>Basic Search</h1></div>
+
+                        <p>In following way you can make a REST call to make a search on model 'leads'. you can see the lead searched and parameters that we need to pass in snapshot.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_search">
+                                        <h4>Basic search REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_search" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/basicsearchcall.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>Here we are making a basic search on leads model with search query "Lila Short". For this you need to pass a 'q' parameter with your search query as shown in example.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_search_response">
+                                        <h4>JSON response of REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_search_response" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/basicsearchresponse.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+                        <br>
+                        <p>As you see this page a REST call is fired and in below table you can see the searched data coming from Maaxframe.</p>
+                        <!--p><h4>Enter your search query and click submit.</h4></p>
+                            <form id="basicsearch" class="navbar-form pull-left">
+                                <input id="searchqueryinput" type="text" placeholder="Enter search query" value="Lila Short">
+                                <button style="margin-top: 5px"  class="btn search-btn-click">Submit</button>
+                            </form-->
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_table_basic">
+                                        <h4>Search result we get by REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_table_basic" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <div id="search-result">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <!-- Inline Search
+                        ================================================== -->
+                    <section id="inline-search">
+                        <div class="page-header">
+                            <h1>Inline Search</h1></div>
+
+                        <p>In following way you can make REST call to perform inline search, you can view parameters that you need to pass to make inline search in the snapshot.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_inline_search">
+                                        <h4>Inline search REST call snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_inline_search" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/inline_search_call.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>                    <p>You need to do a GET request and pass a 'q' parameter which will have your search query.You can make it as POST request too, for this you need to give an additional parameter "_method" with value "index".Here we are showing inline search while user presses 'm' key in salutation field.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_inline_response">
+                                        <h4>JSON response of REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_inline_response" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/inline_search_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </section>
+                    <!-- Advance Search
+                        ================================================== -->
+                    <section id="advance-search">
+                        <div class="page-header">
+                            <h1>Advance Search</h1></div>
+                        <p>In following way you can make REST call to perform advance search, you can see example of advance search and the parameters you need to pass.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_advance">
+                                        <h4>REST call of advance search snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_advance" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/advance_search_call.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>Here we are making an advanced search on leads model with search query "lila". For this we need to pass a 'q' parameter in with your search query as shown in example.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_advance_response">
+                                        <h4>JSON response of advance search</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_advance_response" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/advance_search_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>As you see this page a REST call is fired and in below table you can see live data of advance search coming from Maaxframe.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_advance_table">
+                                        <h4>Advance search REST call result</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_advance_table" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <div id="adv-search-result">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <!-- Ascending sort
+                        ================================================== -->
+                    <section id="ascending_sort">
+                        <div class="page-header">
+                            <h1>Ascending Sort</h1></div>
+                        <p>In following way you can make REST call to perform ascending sort .</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_ascending_sort">
+                                        <h4>REST call of ascending sort snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_ascending_sort" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/ascending_sort.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>Here we are making an ascending sort on leads model. In this example we are sorting leads.name field</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#ascending_sort_response">
+                                        <h4>JSON response of ascending sort</h4>
+                                    </a>
+                                </div>
+                                <div id="ascending_sort_response" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/ascending_sort_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    
+                    <!-- Descending sort
+                        ================================================== -->
+<section id="descending_sort">
+                        <div class="page-header">
+                            <h1>Descending Sort</h1></div>
+                        <p>In following way you can make REST call to perform descending sort.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_descending_sort">
+                                        <h4>REST call of descending sort snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_descending_sort" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/descending_sort.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>Here we are making  descending sort on leads model. In this example we are sorting leads.name field</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#descending_sort_response">
+                                        <h4>JSON response of descending sort</h4>
+                                    </a>
+                                </div>
+                                <div id="descending_sort_response" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/descending_sort_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                </section>
+                    <!-- Create Lead
+                        ================================================== -->
+                    <section id="create-lead">
+                        <div class="page-header">
+                            <h1>Create Lead</h1></div>
+                        <p>In following way we can make REST call to create a new lead. You need to give the name and details of lead that you want to create. format of data can be seen from snapshot.  </p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_create">
+                                        <h4>REST call to Create lead snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_create" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/create_lead_call.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p> Here we are creating a lead record, for this you need to do a POST call and put all the information in payload as shown in example.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_create_res">
+                                        <h4>JSON response of REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_create_res" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/create_lead_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>As you view this page a REST call is fired and  below  you can view live response of Rest call that we have made and is being run in backend.</p>
+
+                    </section>
+                    <!-- Update Lead
+                        ================================================== -->
+                    <section id="update-lead">
+                        <div class="page-header">
+                            <h1>Update Lead</h1></div>
+
+                        <p>In following way you can make REST call to update a lead record which priviously exists in maaxframe. You can see the parameters and format of data that we need to pass in the snapshot. </p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_uplead">
+                                        <h4>REST call to Update lead snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_uplead" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/update_lead_call.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>To update a lead record you need to do a PUT request. Required parameters are shown in example.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_uplead_res">
+                                        <h4>JSON response of REST call</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_uplead_res" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/update_lead_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- Delete Lead
+                        ================================================== -->
+                    <section id="delete-lead">
+                        <div class="page-header">
+                            <h1>Delete Lead</h1></div>
+
+                        <p>In following way you can make REST call to delete a existing lead in maaxframe. You need to pass the ID of lead you want to delete.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_del">
+                                        <h4>REST call to delete lead snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_del" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/deletelead.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p> Here we are making a DELETE call to delete a lead record using its id. You always need to pass record id to be deleted as 'id' and its confirmation will be as shown in example.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_del_res">
+                                        <h4>Response of delete lead snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_del_res" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/bulk_delete_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- Bulk Delete Lead
+                        ================================================== -->
+                    <section id="bulk-delete-lead">
+                        <div class="page-header">
+                            <h1>Bulk Delete Leads</h1></div>
+
+                        <p>In following way we can make REST call to delete records in bulk from maaxframe.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_bulk">
+                                        <h4>REST call to bulk delete snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_bulk" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/bulk_delete_call.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>Here we are making a DELETE call to delete bulk of lead records using their id's. You always need to pass record id to be deleted as 'id[]' and its confirmation will be as shown in example.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_bulk_res">
+                                        <h4>Response of delete lead snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_bulk_res" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/bulk_delete_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <!-- Merge_fields
+                        ================================================== -->
+                    <section id="merge_fields">
+                        <div class="page-header">
+                            <h1>Merge Fields</h1></div>
+
+                        <p>In following way we can make REST call to merge records.</p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_Merge_field">
+                                        <h4>REST call to merge fields snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_Merge_field" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/merge_fields.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>Here we are making a merge call. You always need to pass "merge_field"=1 </p>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_Merge_field_res">
+                                        <h4>Response of merge_field snapshot</h4>
+                                    </a>
+                                </div>
+                                <div id="collapse_Merge_field_res" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <img src="assets/img/collapse_Merge_response.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="page-header">
+                            <h1>Test cases</h1></div>
+                        <p> We also have test cases running on all the REST calls that we have discussed in our API.</P></br>
+                        <p>As we have a link on our top bar of test cases which is to fire all the test cases and we can see them passing or failing live.</p></br>
+                        <p>Test cases are being given to keep a track on our REST calls if they are running upto what we expect and have shared in our API.</P></br>
+                        <p>REST API provides a powerful, convenient, and simple Web services API for interacting with Maaxframe. Its advantages include ease of integration and development, and it’s an excellent choice of technology for use with mobile applications and Web projects. </P>
+                        </br>
+                        <p>REST is a better alternative to SOAP based web services. Where SOAP tries to model the exchange between client and server as calls to objects, REST tries to be faithful to the web domain.</P></br>
+                        <p>MaaxFrame provides a development platform with battle tested code. Development platform eliminates the need of senior developer. Design your business app and configure it to your needs just once as MaaxFrame gets deployed on a cloud infrastructure.
+
+                        </p>
+                    </section>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- Footer
+            ================================================== -->
+        <footer class="footer">
+            <div class="container">
+                <p>© MaaxFrame Inc. 2013 onwards - All rights reserved</p>
+            </div>
+        </footer>
+
+        <!-- Le javascript
+            ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap-transition.js"></script>
+        <script src="assets/js/bootstrap-alert.js"></script>
+        <script src="assets/js/bootstrap-modal.js"></script>
+        <script src="assets/js/bootstrap-dropdown.js"></script>
+        <script src="assets/js/bootstrap-scrollspy.js"></script>
+        <script src="assets/js/bootstrap-tab.js"></script>
+        <script src="assets/js/bootstrap-tooltip.js"></script>
+        <script src="assets/js/bootstrap-popover.js"></script>
+        <script src="assets/js/bootstrap-button.js"></script>
+        <script src="assets/js/bootstrap-collapse.js"></script>
+        <script src="assets/js/bootstrap-carousel.js"></script>
+        <script src="assets/js/bootstrap-typeahead.js"></script>
+        <script src="assets/js/bootstrap-affix.js"></script>
+        <script src="assets/js/bootbox.min.js"></script>
+        <script src="assets/js/holder.js"></script>
+        <script src="assets/js/prettify.js"></script>
+        <script src="examples/lib/json-to-table.js"></script>
+        <script src="assets/js/application.js"></script>
+        <script src="assets/js/jquery.loadJSON.js"></script>
+        <script src="assets/js/handelbars.js"></script>
+        <script src="tests/lib/running_example.js"></script>
+
+
+        <!-- Analytics
+            ================================================== -->
+        <script>
+            var _gauges = _gauges || [];
+            (function() {
+                var t = document.createElement('script');
+                t.type = 'text/javascript';
+                t.async = true;
+                t.id = 'gauges-tracker';
+                t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+                t.src = '//secure.gaug.es/track.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(t, s);
+            })();
+
+        </script>
+        <script>$(document).ready(function () {
+    $('label.tree-toggler').click(function () {
+        $(this).parent().children('ul.tree').toggle(300);
+    });
+});
+        $(document).ready(function () {
+$('label.tree-toggler').parent().children('ul.tree').toggle(300);
+});</script>
+
+
+
+    </body>
+
+</html>

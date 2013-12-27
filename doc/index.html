@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Maaxframe Docs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="assets/css/docs.css" rel="stylesheet">
+        <link href="assets/css/prettify.css" rel="stylesheet">
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="assets/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-146052-10']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+        <!-- Navbar
+        ================================================== -->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">MaaxFrame</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Admin Guide</a></li>
+                           <!-- <li><a href="examples.html">Examples</a></li>
+                            <li><a href="tests/tests.html">Run Tests</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subhead
+        ================================================== -->
+        <header class="jumbotron subhead" id="overview">
+            <div class="container">
+                <h1>MaaxFrame Version 2.1</h1>
+                <p class="lead">This document targets the administrative user.  <a href="http://www.maaxframe.com/contactus.php"  target="_blank">Contact us</a> for any query.</p>
+            </div>
+        </header>
+
+
+        <div class="container">
+
+            <!-- Docs nav
+            ================================================== -->
+            <div class="row">
+                <div class="span3 bs-docs-sidebar">
+
+                    <div>
+                        <div>
+                            <ul class="nav nav-list bs-docs-sidenav ">
+                                <li><label class="tree-toggler nav-header"><h4>Content</h4></label>
+                                <li class="divider"></li>
+                                <!--<li><label class="tree-toggler nav-header"><h4></h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#http-verbs">Intoduction</a></li>
+                                        <li><a href="#parameters">Parameters</a></li>
+                                        <li><a href="#post-login">Login</a></li>
+                                        <li><a href="#get-logout">Logout</a></li>
+                                    </ul>
+                                </li>-->
+                                <li><label class="tree-toggler nav-header"><a href="#"><h4>Introduction</h4></a></label>
+
+                                      <ul class="nav nav-list tree">
+                                        <li><a href="#Overview">Overview</a></li>
+                                        <li><a href="#Core-Admin">Core Admin</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                     <li><label class="tree-toggler nav-header"><a href="#"><h4>User Setting</h4></a></label>
+
+                                        <ul class="nav nav-list tree">
+                                        <li><a href="content/user_setting.html#Overview">Overview</a></li>
+                                        <li><a href="content/user_setting.html#Login">Login</a></li>
+                                        <li><a href="content/user_setting.html#Locale">Locale</a></li>
+                                        <li><a href="content/user_setting.html#User Info">User Info</a></li>
+                                    </ul>
+                                     </li>
+
+                                
+                                <li><label class="tree-toggler nav-header"><a href="#"><h4>Access Controls</h4></a></label>
+                                    <ul class="nav nav-list tree">
+                                        
+                                        <li><a href="content/access_control.html#Users">User</a></li>
+                                        <li><a href="content/access_control.html#Roles">Roles</a></li>
+                                        <li><a href="content/access_control.html#Groups">Groups</a></li>
+                                       
+                                    </ul>
+                                </li>
+                                <li><label class="tree-toggler nav-header"><a href="#"><h4>License Management</h4></a></label>
+                                    <ul class="nav nav-list tree">
+                                        
+                                        <li><a href="content/license.html#Users">User</a></li>
+                                        <li><a href="content/license.html#Roles">Roles</a></li>
+                                        <li><a href="content/license.html#Groups">Groups</a></li>
+                                       
+                                    </ul>
+                                </li>
+                               <!-- <li><label class="tree-toggler nav-header"><h4>2. </h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#ascending_sort">Ascending Sort</a></li>
+                                        <li><a href="#descending_sort">Descending Sort</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><label class="tree-toggler nav-header"><h4>CRUD Docs</h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#post-create">Create Record</a></li>
+                                        <li><a href="#put-update">Update Record</a></li>
+                                        <li><a href="#delete">Delete Record</a></li>
+                                        <li><a href="#bulk-delete">Bulk Delete Record</a></li>
+
+                                    </ul>
+                                </li>-->
+                             </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="span9">
+
+
+                    <!-- Overview
+                    ================================================== -->
+                    <section id="Overview">
+                        <div class="page-header">
+                            <h1>Overview</h1>
+                        </div>
+                        <p>
+                        Welcome to MaaxFrame - a commercial, open source Customer Relationship Management (CRM) application. 
+                        Strong relationships are at the core of every organization's success. MaaxFrame brings ease and order to
+                        the creation, development, and maintenance of your organization's important relationships.
+                       <br> Maax consists of interrelated records in modules such as Accounts, Contacts, Opportunities, Cases, Meetings, Emails, etc. and wraps your data in an intuitive user interface which helps make sense of these different elements of your business. Whatever your organization's focus - sales, marketing, support, or other ventures - Maax’s flexible modules bend to align with your business' models and practices. Manage your relationships from inception to fruition and beyond with Maax’s built-in modules and relationships as well as your custom modules and configurations available to MaaxFrame administrators.</p><br>
+                     
+                   </section>
+
+                        <!-- Core Admin
+                    ================================================== -->
+                       <section id="Core-Admin">
+                       <div class="page-header">
+                            <h1>Core Admin Features</h1>
+                        </div>
+                        
+                        
+                        <br>
+                           <p> 1. User, Password, Team, and Role management to manipulate user access</p>
+                           <br>
+                           <p> 2. Email management to configure smtp servers for outgoing system email accounts and behaviors</p>
+                           <br>
+                           <p> 3. System management to control functional aspects and system-wide preferences within MaaxFrame</p>
+                           <br>
+                           <p> 4. Print views to create templates controlling the appearance of generated PDF files</p>
+                           <br>
+                           <p> 5. Module to tailor existing modules to your organization's needs by adding or modifying fields, relationships, and layouts<p>
+                            <br>
+                            <p>6. Module Builder to create new, custom modules as needed to fully match your organization's processes </p>
+                        
+                        
+                        
+                       
+                   </section>
+
+                    <!-- HTTP Verbs
+                    ================================================== 
+                    <section id="http-verbs">
+                        <div class="page-header">
+                            <h1>HTTP Verbs</h1>
+                        </div>
+                        <p>Where possible, MaaxFrame API uses the appropriate http verb for different actions.</p>
+                        <div>
+                            <h3>GET</h3>
+                            <p>GET is used for retrieving data from resource. </p>
+                            <h3>POST</h3>
+                            <p>POST is used for creating records, and for performing custom actions. </p>
+                            <h3>PUT</h3>
+                            <p>PUT is used for updating records. </p>
+                            <h3>DELETE</h3>
+                            <p>DELETE is used for deleting records. </p>
+                            <h3>Convention</h3>
+                            <p class="text-info">Please note that the return type for all the functions are JSON objects. </p>
+                            <p class="text-warning">In case of success and errors  the return JSON contains detailed messages on what happened.</p>
+
+                        </div> 
+                    </section>-->
+
+                    <!-- Parameters
+                    ================================================== 
+                    <section id="parameters">
+                        <div class="page-header">
+                            <h1>Parameters</h1>
+                        </div>
+                        <p>Most of the API methods take parameters. For different requests we pass parameters with data property of ajax method:</p>
+                        <pre class="linenums prettyprint">
+data: {"_method": "view", "id": "3286"}</pre>
+                        <p>Parameters should be encoded as JSON with a Content-Type of ‘application/x-www-form-urlencoded’:</p>
+                        <pre class="linenums prettyprint">
+contentType: "application/x-www-form-urlencoded"</pre>
+                        <p>We have a special parameter <b>'q'</b>  which helps us to make customized requests and it is very flexible too.</p>
+                        <h3>Dimensions of <b>'q'</b>:</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>q['fields']</td>
+                                    <td> [{"field_name":{properties key value pair}},'field_name']</td>
+                                    <td> Fields to be displayed or fields that we want if we dont give field it will take as per view.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['where']</td>
+                                    <td>[{"column_name":""},{"column_name >":"1000"},{"OR":[{"column_name":""},{"column_name":""}]}] </td>
+                                    <td>Any of the where conditions, advance/basic search use the where condition, it need to be updated on change of criteria.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['order']</td>
+                                    <td>{"column_name ASC"}</td>
+                                    <td> Result set to be order by.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['limit']</td>
+                                    <td> 1000</td>
+                                    <td>  Number of records to be displayed, 0 means all records will be displayed.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['paginate_as']</td>
+                                    <td> lazy/normal</td>
+                                    <td>If you select 'lazy', it will not count the number of records and if selected normal it will count the number of records.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['page']</td>
+                                    <td>2</td>
+                                    <td> Result page to be displayed. build pagination with "limit", Page no. start with 1.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['search_advance']</td>
+                                    <td>[{"column_name":"","op":"AND"},{"column_name >":"1000" ,"op":""}]</td>
+                                    <td>Criteria to filter result based on.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['search_basic']</td>
+                                    <td> John</td>
+                                    <td> Full text search of result set.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['search']</td>
+                                    <td> {"column_name":""}</td>
+                                    <td>Search by particular column.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['reset']</td>
+                                    <td>1</td>
+                                    <td> If the existing where clause in filter to be reset before searching result.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['auto_search_listview']</td>
+                                    <td>1</td>
+                                    <td> If 1 then default view will be fetched for current model/user and then all criteria will be merge with it.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['normalized']</td>
+                                    <td>1</td>
+                                    <td> If you are passing  normalized value (eg. date not according to your locale) we select this field as 1, in this case it will not further normalize the data.</td>
+                                </tr>
+                                <tr>
+                                    <td>q['track_open']</td>
+                                    <td>1</td>
+                                    <td>  If 1 then currently open view will overwrite last open view session variable. This is used for next visit of user to same controller.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </section>-->
+
+                    <!-- POST Login
+                    ================================================== 
+                    <section id="post-login">
+                        <div class="page-header">
+                            <h1>Login</h1>
+                        </div>
+                        <p>For login you need to do a POST request, that returns us an api key which will be used for further transactions.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/access_controls/users.json",
+type: "POST",
+data: {"_method": "login", "data[users][user_name]": "user_name", "data[users][user_password]": "password"},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <a href="examples.html#login">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>_method(required)</td>
+                                    <td>login</td>
+                                    <td>We must need to give the method name for login call.</td>
+                                </tr>
+                                <tr>
+                                    <td>data[users][user_name](required)</td>
+                                    <td>XYZ</td>
+                                    <td>This is a login call so the user name is required.Here you need to give a valid user name at place of 'XYZ'.</td>
+                                </tr>
+                                <tr>
+                                    <td>data[users][user_password](required)</td>
+                                    <td>'ABC'</td>
+                                    <td>This is a login call so the password is required.Here you need to give a valid password at place of 'ABC'.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>-->
+
+                    <!-- GET Logout
+                   ================================================== 
+                    <section id="get-logout">
+                        <div class="page-header">
+                            <h1>Logout</h1>
+                        </div>
+                        <p>To logout you need to do a GET request using '_method' parameter with value 'logout'.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/access_controls/users.json",
+type: "GET",
+data: {"_method":"logout"},
+contentType: "application/x-www-form-urlencoded",
+success: function(data) {}</pre>
+                        <a href="examples.html#logout">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>_method(required)</td>
+                                    <td>logout</td>
+                                    <td>This is a required parameter, to logout the application.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+
+                    <!-- GET List View
+                    ================================================== 
+                    <section id="get-list-view">
+                        <div class="page-header">
+                            <h1>Get List View</h1>
+                        </div>
+                        <p>To get data for a list view use the GET request.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "GET",
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <a href="examples.html#lead-listview">See example with Advanced REST Client</a>
+                    </section>
+
+                   <!-- GET Specific List View
+                    ==================================================
+                    <section id="get-specific-list-view">
+                        <div class="page-header">
+                            <h1>Get Specific List View</h1>
+                        </div>
+                        <p>To get data for a specific list view by it's id use the GET request with a parameter 'current_listview'. You can do it by a POST call also with an extra parameter '_method' with value 'index'.</p>
+                        <p>GET call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "GET",
+data: {"current_listview":"52611fb5-8444-4170-8fcf-1d890acef1b9"},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <p>POST call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "POST",
+data: {"_method":"index","current_listview":"52611fb5-8444-4170-8fcf-1d890acef1b9"},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <a href="examples.html#specific-lead-listview">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>current_listview(optional)</td>
+                                    <td>52611fb5-8444-4170-8fcf-1d890acef1b9</td>
+                                    <td>This parameter is optional, if you will not pass it you will get the default listview. For this parameter you can pass any valid listview id.</td>
+                                </tr>
+                                <tr>
+                                    <td>_method(optional)</td>
+                                    <td>index</td>
+                                    <td>This parameter is optional, but if you do a POST request it becomes required.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- GET Form View
+                    ================================================== 
+                    <section id="get-form-view">
+                        <div class="page-header">
+                            <h1>Get Form View</h1>
+                        </div>
+                        <p>To get data for a form view use the GET request with appropriate parameters.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "GET",
+data: {"_method": "view", "id": "3286"},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <a href="examples.html#lead-form-view">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>_method(required)</td>
+                                    <td>view</td>
+                                    <td>This is a required parameter to get data for a form view.</td>
+                                </tr>
+                                <tr>
+                                    <td>id(required)</td>
+                                    <td>3286</td>
+                                    <td>Record id is required to get its details.You can give any valid id at place of '3286'.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- GET Form Meta Data
+                    ================================================== 
+                    <section id="get-form-metadata">
+                        <div class="page-header">
+                            <h1>Get Form Meta Data</h1>
+                        </div>
+                        <p>To get meta data for a form view use the POST request with '_method' parameter having value 'form' to the respective url.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "POST",
+data: {"_method": "form"},
+contentType: "application./x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <a href="examples.html#lead-form-metadata">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>_method(required)</td>
+                                    <td>form</td>
+                                    <td>This is a required parameter to get meta data of a form. It return meta data of default form.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- GET Specific Form Meta Data
+                    ================================================== 
+                    <section id="get-specific-form-metadata">
+                        <div class="page-header">
+                            <h1>Get Specific Form Meta Data</h1>
+                        </div>
+                        <p>To get meta data for a specific form use the POST request with '_method' parameter having value 'form' and 'name' of the requested form to the respective url.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/calendar/tasks.json/",
+type: "POST",
+data: {"_method": "form", "name":"Generate_from_lead"},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <a href="examples.html#specific-form-metadata">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>_method(required)</td>
+                                    <td>form</td>
+                                    <td>This is a required parameter to get meta data of a form.</td>
+                                </tr>
+                                <tr>
+                                    <td>name(optional)</td>
+                                    <td>Generate_from_lead</td>
+                                    <td>This is an optional parameter, if you do not pass this parameter it returns meta data for default form otherwise of the form which you have given in 'name' parameter.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <!-- GET Specific Report
+                                        ================================================== 
+                    <section id="get-specific-report">
+                        <div class="page-header">
+                            <h1>Get Report</h1>
+                        </div>
+                        <p>To get data for a specific report by it's id use GET request. Pass a parameter '_method' with value '_report'  and an extra parameter 'current_report', which contains the id of required report.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/calendar/tasks.json/",
+type: "GET",
+data: {"_method": "_report", "current_report":"52611fce-37f8-41f9-8812-1d890acef1b9"},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>  
+                        <a href="examples.html#specific-report">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>current_report</td>
+                                    <td>52611fce-37f8-41f9-8812-1d890acef1b9</td>
+                                    <td>It is the id of the requested report.</td>
+                                </tr>
+                                <tr>
+                                    <td>_method</td>
+                                    <td>_report</td>
+                                    <td>This is a required parameter to get meta data of a report.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                    <!-- Paginate
+                                        ================================================== 
+                    <section id="paginate">
+                        <div class="page-header">
+                            <h1>Get Data of a Specific Page</h1>
+                        </div>
+                        <p>To get data for a specific page of a list view, use GET request as shown in the example.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json",
+type: "GET",
+data: {"page":"5"},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>  
+                        <a href="examples.html#paginate">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>page</td>
+                                    <td>5</td>
+                                    <td>This parameter is used to specify the required page of a list view.</td>
+                                </tr>
+                                <tr>
+                                    <td>_method</td>
+                                    <td>index</td>
+                                    <td>This is a required parameter to get meta data.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                     <!-- FIND
+                    ================================================== 
+                     <section id="find">
+                        <div class="page-header">
+                            <h1>Find</h1>
+                        </div>
+                        <p>To perform find operation, you need to do a GET request and pass a 'q' parameter which will have method parameter with value find.You can make it as POST request, for this you need to give an additional parameter "_method" with value "index".</p>
+                       Find method bypasses the list view generation code and directly runs q over the database. This method is used when we directly want to hit the model. Data returned is lighter than the data returned by index method.<br>
+                        <p>GET call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "GET",
+data: {'q': {"method": "find", "qualified":"1"}},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <p>POST call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "POST",
+data: {'_method':'index','q': {"method": "find", "qualified":"1"}},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}
+                        </pre>
+                        <a href="examples.html#find">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>q(required)</td>
+                                    <td>{"method": "find", "qualified":"1"}</td>
+                                    <td>Find method does not return list view compatible data but if the value of qualified parameter is set to 1, then find method returns qualified data.</td>
+                                </tr>
+                                <tr>
+                                    <td>_method</td>
+                                    <td>index</td>
+                                    <td>This is an optional parameter, but if you do a POST call then it becomes required.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="index.html#parameters">More details on 'q' parameter</a>
+                    </section>
+                     <!-- Merge_fields
+                                       ================================================== 
+                    <section id="merge_fields">
+                        <div class="page-header">
+                            <h1>Merge Fields</h1>
+                        </div>
+                        <p>If you want new fields along with the existing fields of the view, use GET method. Pass the parameter q and set the value of parameter "merge_fields" as 1 as shown in the example below. It will merge the fields that we have in the list view definition and the fields that we have specified in the q.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/development_base/menus.json
+type: 'GET',
+data: {"current_listview": "52611fb5-a93c-4fe3-8d3e-1d890acef1b9", 'q': {"merge_fields":"1", "fields":["menus.parent_id"]}},
+contentType: 'application/x-www-form-urlencoded',
+success: function(resp) {}</pre>
+                        <a href="examples.html#merge_fields">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>"merge_fields"(required)</td>
+                                    <td>1</td>
+                                    <td>In this parameter you need to give 1 to confirm merge action. </td>
+                                </tr>
+                                <tr>
+                                    <td>"fields")</td>
+                                    <td>menus.parent_id</td>
+                                    <td>In this parameter you need to give the required fields.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <!-- GET Basic Search
+                    ================================================== 
+                    <section id="get-basic-search">
+                        <div class="page-header">
+                            <h1>Basic Search</h1>
+                        </div>
+                        <p>To perform basic search, you need to do a GET request and pass a 'q' parameter which will have your search query.You can make it as POST request, for this you need to give an additional parameter "_method" with value "index".</p>
+                        If you want to search a lead having name like 'Lila Short':<br>
+                        <p>GET call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "GET",
+data: {'q': {"search_basic": "Lila Short"}},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <p>POST call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "POST",
+data: {'_method':'index', 'q': {"search_basic": "Lila Short"}},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <a href="examples.html#basic-search">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>q(required)</td>
+                                    <td>{"search_basic": "Lila Short"}</td>
+                                    <td>This parameter expects a JSON with key 'search_basic' and the value to be searched.</td>
+                                </tr>
+                                <tr>
+                                    <td>_method(optional)</td>
+                                    <td>index</td>
+                                    <td>This is an optional parameter, but if you do a POST call then it becomes required.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="index.html#parameters">More details on 'q' parameter</a>
+                    </section>
+
+                    <!-- GET Inline Search
+                    ================================================== 
+                    <section id="get-inline-search">
+                        <div class="page-header">
+                            <h1>Inline Search</h1>
+                        </div>
+                        <p>To perform inline search, you need to do a GET request and pass a 'q' parameter which will have your search query.You can make it as POST request, for this you need to give an additional parameter "_method" with value "index".Here we are showing inline search while user presses 'm' key in salutation field.</p>
+                        <p>GET call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/masters/config_salutations.json/",
+type: "GET",
+data: {'q': {"paginate_as":"lazy","limit":20,"fields":["{{MODEL}}.{{DISPLAY_FIELD}}","{{MODEL}}.{{PRIMARY_KEY}}"],"where":{"{{MODEL}}.{{DISPLAY_FIELD}} LIKE ":"m"},"fetch":1,"autocomplete":1}},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <p>POST call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/masters/config_salutations.json/",
+type: "POST",
+data: {'_method':'index','q': {"paginate_as":"lazy","limit":20,"fields":["{{MODEL}}.{{DISPLAY_FIELD}}","{{MODEL}}.{{PRIMARY_KEY}}"],"where":{"{{MODEL}}.{{DISPLAY_FIELD}} LIKE ":"m"},"fetch":1,"autocomplete":1}},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <a href="examples.html#inline-search">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>q(required)</td>
+                                    <td>{"paginate_as":"lazy","limit":20,"fields":["{{MODEL}}.{{DISPLAY_FIELD}}","{{MODEL}}.{{PRIMARY_KEY}}"],"where":{"{{MODEL}}.{{DISPLAY_FIELD}} LIKE ":"m"},"fetch":1,"autocomplete":1}</td>
+                                    <td>This parameter expects a JSON with keys</td>
+                                </tr>
+                                <tr>
+                                    <td>paginate_as</td>
+                                    <td>lazy</td>
+                                    <td>It will not fetch total number of records, This will speed up listviews, but you will not know total number of pages in listview</td>
+                                </tr>
+                                <tr>
+                                    <td>limit</td>
+                                    <td>20</td>
+                                    <td>Records to be shown in one page</td>
+                                </tr>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>["{{MODEL}}.{{DISPLAY_FIELD}}","{{MODEL}}.{{PRIMARY_KEY}}"]</td>
+                                    <td>This parameter refers to data to be fetch. "{{}}" are merge words and get replaced with current controller/model in scope.</td>
+                                </tr>
+                                <tr>
+                                    <td>where</td>
+                                    <td>{"{{MODEL}}.{{DISPLAY_FIELD}} LIKE ":"m"}</td>
+                                    <td>This have your query to be searched.</td>
+                                </tr>
+                                <tr>
+                                    <td>fetch</td>
+                                    <td>1</td>
+                                    <td>Confirms the retrieval.</td>
+                                </tr>
+                                <tr>
+                                    <td>autocomplete</td>
+                                    <td>1</td>
+                                    <td>Request for auto complete.</td>
+                                </tr>
+                                <tr>
+                                    <td>_method(optional)</td>
+                                    <td>index</td>
+                                    <td>This is an optional parameter, but if you do a POST call then it becomes required.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="index.html#parameters">More details on 'q' parameter</a>
+                    </section>
+                    <!-- GET Advanced Search
+                    ================================================== 
+                    <section id="get-advanced-search">
+                        <div class="page-header">
+                            <h1>Advanced Search</h1>
+                        </div>
+                        <p>To perform advanced search, you need to do a GET request and pass a 'q' parameter which will have your search query.You can make it as POST request, for this you need to give an additional parameter "_method" with value "index".</p>
+                        <p>If you want to search a lead having first name 'lila':</p>
+                        <p>GET call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "GET",
+data: {"search_advance": {"op":"", "value":{"leads.first_name":"lila"}}},
+contentType: "application/x-www-form-urlencoded",
+success: function(data) {}</pre>
+                        <p>POST call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "POST",
+data: {"_method":"index","q":{"search_advance": {"op":"", "value":{"leads.first_name":"lila"}}}},
+contentType: "application/x-www-form-urlencoded",
+success: function(data) {}</pre>
+                        <a href="examples.html#advance-search">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>q(required)</td>
+                                    <td>{"search_advance": {"op":"", "value":{"leads.first_name":"lila"}}}</td>
+                                    <td>This parameter expects a JSON with keys</td>
+                                </tr>
+                                <tr>
+                                    <td>search_advance</td>
+                                    <td>{"op":"", "value":{"leads.first_name":"lila"}}}</td>
+                                    <td>JSON (Having parameters for advanced search).</td>
+                                </tr>
+                                <tr>
+                                    <td>op</td>
+                                    <td>""</td>
+                                    <td>This is option, you may use it for complex searches. It can have value- AND, OR, ""</td>
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+                                    <td>{"leads.first_name":"lila"}</td>
+                                    <td>This parameter have your filter criteria.</td>
+                                </tr>
+                                <tr>
+                                    <td>_method(optional)</td>
+                                    <td>index</td>
+                                    <td>This is an optional parameter, but if you do a POST call then it becomes required.</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                        <a href="index.html#parameters">More details on 'q' parameter</a>
+                    </section>
+                    <!-- GET Advanced ascending Sort
+                                        ================================================== 
+                    <section id="ascending_sort">
+                        <div class="page-header">
+                            <h1>Ascending Sort</h1>
+                        </div>
+                        <p>To perform ascending sort, you need to do a GET request. Shown below is the example to sort a column (leads.name) </p>
+
+                        <p>GET call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads/index.json/sort:leads.name/dir:ASC/",
+type: "GET",
+contentType: "application/x-www-form-urlencoded",
+success: function(data) {}</pre>
+
+                        <a href="examples.html#ascending_sort">See example with Advanced REST Client</a>
+                    </section>
+                    <!-- GET Advanced descending  Sort
+                                        ================================================== 
+                    <section id="descending_sort">
+                        <div class="page-header">
+                            <h1>Descending Sort</h1>
+                        </div>
+                        <p>To perform descending sort, you need to do a GET request. Shown below is the example to sort a column (leads.name)</p>
+
+                        <p>GET call:</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads/index.json/sort:leads.name/dir:DESC/",
+type: "GET",
+contentType: "application/x-www-form-urlencoded",
+success: function(data) {}</pre>
+                        <a href="examples.html#descending_sort">See example with Advanced REST Client</a>
+                    </section>
+                    <!-- POST Create
+                    ================================================== 
+                    <section id="post-create">
+                        <div class="page-header">
+                            <h1>Create Record</h1>
+                        </div>
+                        <p>To create a record you need to do a POST request with data as JSON format.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json/",
+type: "POST",
+data: {"data[leads][first_name]":"FirstName", "data[leads][last_name]":"LastName", "data[leads][office_email]":"officemail@example.com", "data[leads][personal_email]":"personalmail@example.com", "data[leads][assistant_email]":"assistantmail@example.com"},
+contentType: "application/x-www-form-urlencoded",
+success: function(response) {}</pre>
+                        <a href="examples.html#create-lead">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>data[leads][first_name](required)</td>
+                                    <td>John</td>
+                                    <td>In this parameter you need to give first name of the lead at place of 'John'.</td>
+                                </tr>
+                                <tr>
+                                    <td>data[leads][last_name](required)</td>
+                                    <td>Martin</td>
+                                    <td>In this parameter you need to give last name of the lead at place of 'Martin'.</td>
+                                </tr>
+                                <tr>
+                                    <td>data[leads][office_email](required)</td>
+                                    <td>abc@example.com</td>
+                                    <td>In this parameter you need to give office e-mail id of the lead at place of 'abc@example.com'.</td>
+                                </tr>
+                                <tr>
+                                    <td>data[leads][personal_email](required)</td>
+                                    <td>xyz@example.com</td>
+                                    <td>In this parameter you need to give personal e-mail id of the lead at place of 'abc@example.com'.</td>
+                                </tr>
+                                <tr>
+                                    <td>data[leads][assistant_email](optional)</td>
+                                    <td>pqr@example.com</td>
+                                    <td>In this parameter you need to give personal e-mail id of the lead at place of 'abc@example.com'.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Update Lead
+                    ================================================== 
+                    <section id="put-update">
+                        <div class="page-header">
+                            <h1>Update Record</h1>
+                        </div>
+                        <p>To update a lead record you need to do a PUT request. It updates the fields for the id you are passing in parameter. </p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json",
+type: "PUT",
+data: {"data[leads][id]":"2459", "data[leads][first_name]":"FirstName", "data[leads][last_name]":"LastName", "data[leads][office_email]":"officemail@examplel.com", "data[leads][personal_email]":"personalmail@example.com", "data[leads][assistant_email]":"assistantmail@example.com"},
+contentType: "application/x-www-form-urlencoded",
+success: function(data) {}</pre>
+                        <a href="examples.html#update-lead">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>data[leads][id](required)</td>
+                                    <td>2459</td>
+                                    <td>This is a required parameter, as you need to pass the record id to update the record.</td>
+                                </tr>
+                                <tr>
+                                    <td>data[leads][first_name](required)</td>
+                                    <td>John</td>
+                                    <td>In this parameter you need to give first name of the lead at place of 'John'.</td>
+                                </tr>
+                                <tr>
+                                    <td>data[leads][last_name](required)</td>
+                                    <td>Martin</td>
+                                    <td>In this parameter you need to give last name of the lead at place of 'Martin'.</td>
+                                </tr>
+                                <tr>
+                                    <td>data[leads][office_email](required)</td>
+                                    <td>abc@example.com</td>
+                                    <td>In this parameter you need to give office e-mail id of the lead at place of 'abc@example.com'.</td>
+                                </tr>
+                                <tr>
+                                    <td>data[leads][personal_email](required)</td>
+                                    <td>xyz@example.com</td>
+                                    <td>In this parameter you need to give personal e-mail id of the lead at place of 'abc@example.com'.</td>
+                                </tr>
+                                <tr>
+                                    <td>data[leads][assistant_email](optional)</td>
+                                    <td>pqr@example.com</td>
+                                    <td>In this parameter you need to give personal e-mail id of the lead at place of 'abc@example.com'.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <!-- DELETE
+                    ================================================== 
+                    <section id="delete">
+                        <div class="page-header">
+                            <h1>Delete Record</h1>
+                        </div>
+                        <p>To delete a record you need to do a DELETE request with record id and confirmation.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json",
+type: "DELETE",
+data: {"id": "4265", "is_confirm":"1"},
+contentType: "application/x-www-form-urlencoded",
+success: function(data) {}</pre>
+                        <a href="examples.html#delete-lead">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>id(required)</td>
+                                    <td>4265</td>
+                                    <td>In this parameter you need to give an existing record id at place of '4265' to be deleted.</td>
+                                </tr>
+                                <tr>
+                                    <td>is_confirm(required)</td>
+                                    <td>1</td>
+                                    <td>In this parameter you need to give 1 to confirm delete action.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Bulk DELETE
+                    ================================================== 
+                    <section id="bulk-delete">
+                        <div class="page-header">
+                            <h1>Bulk Delete Record</h1>
+                        </div>
+                        <p>To delete bulk of record you need to do a DELETE request with record id's and confirmation.</p>
+                        <pre class="linenums prettyprint">
+url: "https://app1.maaxframe.com/uat/crm/leads.json",
+type: "DELETE",
+data: {"id[]":"123","id[]":"234","id[]":"345", "is_confirm":"1"},
+contentType: "application/x-www-form-urlencoded",
+success: function(data) {}</pre>
+                        <a href="examples.html#bulk-delete-lead">See example with Advanced REST Client</a>
+                        <h3>Parameters</h3>
+                        <table class="table table-hover">
+                            <th>Parameter</th>
+                            <th>Possible values</th>
+                            <th>Explaination</th>
+                            <tbody>
+                                <tr>
+                                    <td>id[](required)</td>
+                                    <td>123</td>
+                                    <td>This parameter contains the id of the record to be deleted, this can be passed as many times as the number of record you want to delete in a single request.</td>
+                                </tr>
+                                <tr>
+                                    <td>is_confirm(required)</td>
+                                    <td>1</td>
+                                    <td>In this parameter you need to give 1 to confirm delete action.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                 </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- Footer
+        ================================================== -->
+        <footer class="footer">
+            <div class="container">
+                <p>© MaaxFrame Inc. 2013 onwards - All rights reserved</p>
+            </div>
+        </footer>
+
+
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap-transition.js"></script>
+        <script src="assets/js/bootstrap-alert.js"></script>
+        <script src="assets/js/bootstrap-modal.js"></script>
+        <script src="assets/js/bootstrap-dropdown.js"></script>
+        <script src="assets/js/bootstrap-scrollspy.js"></script>
+        <script src="assets/js/bootstrap-tab.js"></script>
+        <script src="assets/js/bootstrap-tooltip.js"></script>
+        <script src="assets/js/bootstrap-popover.js"></script>
+        <script src="assets/js/bootstrap-button.js"></script>
+        <script src="assets/js/bootstrap-collapse.js"></script>
+        <script src="assets/js/bootstrap-carousel.js"></script>
+        <script src="assets/js/bootstrap-typeahead.js"></script>
+        <script src="assets/js/bootstrap-affix.js"></script>
+        <script src="assets/js/bootbox.min.js"></script>
+        <script src="assets/js/holder.js"></script>
+        <script src="assets/js/prettify.js"></script>
+
+        <script src="assets/js/application.js"></script>
+
+
+        <!-- Analytics
+        ================================================== -->
+        <script>
+            var _gauges = _gauges || [];
+            (function() {
+                var t = document.createElement('script');
+                t.type = 'text/javascript';
+                t.async = true;
+                t.id = 'gauges-tracker';
+                t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+                t.src = '//secure.gaug.es/track.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(t, s);
+            })();
+                
+                      
+        </script>
+        <script>$(document).ready(function () {
+            $('label.tree-toggler').click(function () {
+                $(this).parent().children('ul.tree').toggle(300);
+            });
+        });
+        $(document).ready(function () {
+            $('label.tree-toggler').parent().children('ul.tree').toggle(300);
+        });</script>
+
+    </body>
+</html>

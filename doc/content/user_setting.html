@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Maaxframe Docs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="../assets/css/bootstrap.css" rel="stylesheet">
+        <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="../assets/css/docs.css" rel="stylesheet">
+        <link href="../assets/css/prettify.css" rel="stylesheet">
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="../assets/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-146052-10']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+        <!-- Navbar
+        ================================================== -->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">MaaxFrame</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Admin Guide</a></li>
+                           <!-- <li><a href="examples.html">Examples</a></li>
+                            <li><a href="tests/tests.html">Run Tests</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subhead
+        ================================================== -->
+        <header class="jumbotron subhead" id="overview">
+            <div class="container">
+                <h1>MaaxFrame Version 2.1</h1>
+                <p class="lead">This document targets the administrative user.  <a href="http://www.maaxframe.com/contactus.php"  target="_blank">Contact us</a> for any query.</p>
+            </div>
+        </header>
+
+
+        <div class="container">
+
+            <!-- Docs nav
+            ================================================== -->
+            <div class="row">
+                <div class="span3 bs-docs-sidebar">
+
+                    <div  >
+                        <div >
+                            <ul class="nav nav-list bs-docs-sidenav ">
+                                <li><label class="tree-toggler nav-header"><h4>Tabe of Contents</h4></label>
+                                <li class="divider"></li>
+                                <!--<li><label class="tree-toggler nav-header"><h4></h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#http-verbs">Intoduction</a></li>
+                                        <li><a href="#parameters">Parameters</a></li>
+                                        <li><a href="#post-login">Login</a></li>
+                                        <li><a href="#get-logout">Logout</a></li>
+                                    </ul>
+                                </li>-->
+                                <li><label class="tree-toggler nav-header"><a href="#"><h4>Introduction</h4></a></label>
+
+                                  <!--  <ul class="nav nav-list tree">
+                                        <li><a href="#get-list-view">Get List View</a></li>
+                                        <li><a href="#get-specific-list-view">Get Specific List View</a></li>
+                                        <li><a href="#get-form-view">Get Form View</a></li>
+                                        <li><a href="#get-form-metadata">Get Form Meta Data</a></li>
+                                        <li><a href="#get-specific-form-metadata">Get Specific Form Meta Data</a></li>
+                                        <li><a href="#get-specific-report">Get Report</a></li>
+                                        <li><a href="#paginate">Pagination</a></li>
+                                        <li><a href="#find">Find</a></li>
+                                        <li><a href="#merge_fields">Merge Fields</a></li>
+
+                                    </ul>-->
+                                      <ul class="nav nav-list tree">
+                                        <li><a href="../index.html">Overview</a></li>
+                                        <li><a href="../index.html">Core Admin</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                     <li><label class="tree-toggler nav-header"><a href="#"><h4>User Setting</h4></a></label>
+                                        <ul class="nav nav-list tree">
+                                        <li><a href="#Overview">Overview</a></li>
+                                        <li><a href="#Login">Login</a></li>
+                                        <li><a href="#Locale">Locale</a></li>
+                                        <li><a href="#User Info">User Info</a></li>
+                                    </ul>
+                                </li>
+
+                                
+                                <li><label class="tree-toggler nav-header"><a href="#"><h4>Access Controls</h4></a></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="access_control.html#User">User</a></li>
+                                        <li><a href="access_control.html#Roles">Roles</a></li>
+                                        <li><a href="access_control.html#Groups">Groups</a></li>
+                                       
+                                    </ul>
+                                </li>
+                                 <li><label class="tree-toggler nav-header"><a href="#"><h4>Licenses</h4></a></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="license.html#User">User</a></li>
+                                        <li><a href="license.html#Roles">Roles</a></li>
+                                        <li><a href="license.html#Groups">Groups</a></li>
+                                       
+                                    </ul>
+                                </li>
+                               <!-- <li><label class="tree-toggler nav-header"><h4>2. </h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#ascending_sort">Ascending Sort</a></li>
+                                        <li><a href="#descending_sort">Descending Sort</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><label class="tree-toggler nav-header"><h4>CRUD Docs</h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#post-create">Create Record</a></li>
+                                        <li><a href="#put-update">Update Record</a></li>
+                                        <li><a href="#delete">Delete Record</a></li>
+                                        <li><a href="#bulk-delete">Bulk Delete Record</a></li>
+
+                                    </ul>
+                                </li>-->
+                             </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="span9">
+
+
+                    <!-- Overview
+                    ================================================== -->
+                    <section id="Overview">
+                        <div class="page-header">
+                            <h1>Overview</h1>
+                        </div>
+                        <p>
+                  MaaxFrame offers administrators a wide range of configuration options to set up their account. Upon your initial log into MaaxFrame, you will be logged in as admin and can do the basic settings from user profile. Once your user profile setup is complete, you can also navifgate to a specific area of MaaxFrame to perform various administrative functions (e.g. importing data, creating users, configuring the application via Module, etc.) as well.
+                  <br> Please note that system administrators can also set up each user's basic settings when creating a user in MaaxFrame . This documentation will cover the various options available when first accessing your MaaxFrame  account.
+                        </p><br>
+                    </section>
+
+                     <!-- Login
+                    ================================================== -->
+                    <section id="Login">
+                        <div class="page-header">
+                            <h1>Login</h1>
+                        </div>
+                        
+                           The MaaxFrame login screen is where you enter your login credentials (username and password) to access your instance. Enter in your instance URL (e.g. https://app1.maaxframe.com/your_instance) on your web browser to load Maax’s login screen. If you do not know your instance URL or login credentials, please reach out to another system administrator in your organization for assistance.
+                    <tbody>
+                    <tr>
+                           <td width="66" valign="middle" height="53">
+                     <br>
+                     <br>
+                     <img src= "../assets/img/4.jpg" alt="Logo"/>
+                     <br>
+                        </td>
+                    </tr>
+                        </tbody>
+                        
+                       
+                    </section>
+
+                      <!-- Login
+                    ================================================== -->
+                    <section id="Locale">
+                        <div class="page-header">
+                            <h1>Locale</h1>
+                        </div>
+                        <br>
+                        <br>
+                        <img src= "../assets/img/5.png" alt="Locale" align="middle"/>
+                        <br>
+                        <br>
+                        
+                  The Your Locale step is where you can configure the date, time, and name format and language you want displayed in MaaxFrame based on your current geographical location. Unlike the system locale settings, this is where you can specify how you would like data displayed in your specific user account. Please note that the information you provide on this page will override the system locale settings and can be updated in your user preferences at a later time if desired. 
+                    <br> <br>
+                  The following options are available to configure your locale settings:
+                  <ul>
+                        <br>
+                        <li><b>Time Zone</b> : Select the timezone based on your current location.</li>
+                        <br>
+                        <li><b>Date Format</b> : Select the format you want the date stamps displayed in Maax.</li>
+                        <br>
+                        <li><b>Time Format</b> : Select the format you want the timestamps displayed in Maax.</li>
+                        <br>
+                        <li><b>Name Format</b> : Select the format you want the concatenated name fields displayed in Maax’s list view and record view.</li>
+                        <br>
+                        <li><b>Language</b> : Select the language for your profile.</li>
+                        
+                    </ul>
+
+
+                    </section>
+
+                         <!-- User Info
+                    ================================================== -->
+                    <section id="User Info">
+                        <div class="page-header">
+                            <h1>User Info</h1>
+                        </div>
+                        
+                  You can configure some of your personal settings via the User profile. User profile is where you can enter key information (i.e. name, email address, phone, time-zone) about yourself to be stored in your user profile. Please note that the information you provide on this step can be updated in your user preferences at a later time if desired. 
+                  <br><br>
+                    The following options are available to configure your user profile:
+              
+                    <ul>
+                        <br>
+                        <li><b>First Name</b> : Enter your first name.</li>
+                        
+                        <li><b>Last Name</b> : Enter your last name.</li>
+                        
+                        <li><b>Email Address</b> : Enter your email address.</li>
+                        
+                        <li><b>Office Phone</b> : Enter your office number.</li>
+                        
+                        <li><b>Time-zone</b> : Enter your time-zone</li>
+                        <br>
+                     <br>
+                     <img src= "../assets/img/6.png" alt="User Info"/>
+                     <br>
+                        
+                    </ul>
+
+
+                    </section>
+                    
+
+
+
+
+        <!-- Footer
+        ================================================== -->
+        <footer class="footer">
+            <div class="container">
+                <p>© MaaxFrame Inc. 2013 onwards - All rights reserved</p>
+            </div>
+        </footer>
+
+
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <script src="../assets/js/jquery.js"></script>
+        <script src="../assets/js/bootstrap-transition.js"></script>
+        <script src="../assets/js/bootstrap-alert.js"></script>
+        <script src="../assets/js/bootstrap-modal.js"></script>
+        <script src="../assets/js/bootstrap-dropdown.js"></script>
+        <script src="../assets/js/bootstrap-scrollspy.js"></script>
+        <script src="../assets/js/bootstrap-tab.js"></script>
+        <script src="../assets/js/bootstrap-tooltip.js"></script>
+        <script src="../assets/js/bootstrap-popover.js"></script>
+        <script src="../assets/js/bootstrap-button.js"></script>
+        <script src="../assets/js/bootstrap-collapse.js"></script>
+        <script src="../assets/js/bootstrap-carousel.js"></script>
+        <script src="../assets/js/bootstrap-typeahead.js"></script>
+        <script src="../assets/js/bootstrap-affix.js"></script>
+        <script src="../assets/js/bootbox.min.js"></script>
+        <script src="../assets/js/holder.js"></script>
+        <script src="../assets/js/prettify.js"></script>
+
+        <script src="../assets/js/application.js"></script>
+
+
+        <!-- Analytics
+        ================================================== -->
+        <script>
+            var _gauges = _gauges || [];
+            (function() {
+                var t = document.createElement('script');
+                t.type = 'text/javascript';
+                t.async = true;
+                t.id = 'gauges-tracker';
+                t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+                t.src = '//secure.gaug.es/track.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(t, s);
+            })();
+                
+                      
+        </script>
+        <script>$(document).ready(function () {
+            $('label.tree-toggler').click(function () {
+                $(this).parent().children('ul.tree').toggle(300);
+            });
+        });
+        $(document).ready(function () {
+            $('label.tree-toggler').parent().children('ul.tree').toggle(300);
+        });</script>
+
+    </body>
+</html>

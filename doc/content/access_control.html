@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Maaxframe Docs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="../assets/css/bootstrap.css" rel="stylesheet">
+        <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="../assets/css/docs.css" rel="stylesheet">
+        <link href="../assets/css/prettify.css" rel="stylesheet">
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="../assets/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-146052-10']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+        <!-- Navbar
+        ================================================== -->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">MaaxFrame</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Admin Guide</a></li>
+                           <!-- <li><a href="examples.html">Examples</a></li>
+                            <li><a href="tests/tests.html">Run Tests</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subhead
+        ================================================== -->
+        <header class="jumbotron subhead" id="overview">
+            <div class="container">
+                <h1>MaaxFrame Version 2.1</h1>
+                <p class="lead">This document targets the administrative user.  <a href="http://www.maaxframe.com/contactus.php"  target="_blank">Contact us</a> for any query.</p>
+            </div>
+        </header>
+
+
+        <div class="container">
+
+            <!-- Docs nav
+            ================================================== -->
+            <div class="row">
+                <div class="span3 bs-docs-sidebar">
+
+                    <div  >
+                        <div >
+                            <ul class="nav nav-list bs-docs-sidenav ">
+                                <li><label class="tree-toggler nav-header"><h4>Tabe of Contents</h4></label>
+                                <li class="divider"></li>
+                                <!--<li><label class="tree-toggler nav-header"><h4></h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#http-verbs">Intoduction</a></li>
+                                        <li><a href="#parameters">Parameters</a></li>
+                                        <li><a href="#post-login">Login</a></li>
+                                        <li><a href="#get-logout">Logout</a></li>
+                                    </ul>
+                                </li>-->
+                                <li><label class="tree-toggler nav-header"><a href="#"><h4>Introduction</h4></a></label>
+
+                                  <!--  <ul class="nav nav-list tree">
+                                        <li><a href="#get-list-view">Get List View</a></li>
+                                        <li><a href="#get-specific-list-view">Get Specific List View</a></li>
+                                        <li><a href="#get-form-view">Get Form View</a></li>
+                                        <li><a href="#get-form-metadata">Get Form Meta Data</a></li>
+                                        <li><a href="#get-specific-form-metadata">Get Specific Form Meta Data</a></li>
+                                        <li><a href="#get-specific-report">Get Report</a></li>
+                                        <li><a href="#paginate">Pagination</a></li>
+                                        <li><a href="#find">Find</a></li>
+                                        <li><a href="#merge_fields">Merge Fields</a></li>
+
+                                    </ul>-->
+                                      <ul class="nav nav-list tree">
+                                        <li><a href="../index.html">Overview</a></li>
+                                        <li><a href="../index.html">Core Admin</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                     <li><label class="tree-toggler nav-header"><a href="#"><h4>User Setting</h4></a></label>
+                                        <ul class="nav nav-list tree">
+                                        <li><a href="user_setting.html#Overview">Overview</a></li>
+                                        <li><a href="user_setting.html#Login">Login</a></li>
+                                        <li><a href="user_setting.html#Locale">Locale</a></li>
+                                        <li><a href="user_setting.html#User Info">User Info</a></li>
+                                    </ul>
+                                     </li>
+
+                                
+                                <li><label class="tree-toggler nav-header"><a href="#"><h4>Access Controls</h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#Users">User</a></li>
+                                        <li><a href="#Roles">Roles</a></li>
+                                        <li><a href="#Groups">Groups</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li><label class="tree-toggler nav-header"><a href="#"><h4>Licenses</h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="license.html#Users">User</a></li>
+                                        <li><a href="license.html#Roles">Roles</a></li>
+                                        <li><a href="license.html#Groups">Groups</a></li>
+                                        
+                                    </ul>
+                                </li>
+                               <!-- <li><label class="tree-toggler nav-header"><h4>2. </h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#ascending_sort">Ascending Sort</a></li>
+                                        <li><a href="#descending_sort">Descending Sort</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><label class="tree-toggler nav-header"><h4>CRUD Docs</h4></label>
+                                    <ul class="nav nav-list tree">
+                                        <li><a href="#post-create">Create Record</a></li>
+                                        <li><a href="#put-update">Update Record</a></li>
+                                        <li><a href="#delete">Delete Record</a></li>
+                                        <li><a href="#bulk-delete">Bulk Delete Record</a></li>
+
+                                    </ul>
+                                </li>-->
+                             </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="span9">
+
+
+                    <!-- User Module
+                    ================================================== -->
+                    <section id="Users">
+                        <div class="page-header">
+                            <h1>User</h1>
+                        </div>
+                        <b><h4>Regular User</h4></b>
+                       <br> A regular user is the most common of the user types. A majority of employees of an organization will be regular users. This user can access most MaaxFrame modules and perform most every day-to-day function. Regular users are subject to be restricted in their abilities and what records they can access by an administrator using the Group and Roles functionalities in Maax.
+                       <br>
+                        Regular Users will appear in the User module.
+                        <br>
+                        <br>
+
+                        <b><h4>System Administrator</h4></b>
+                        <br>
+                        System Administrator users, or "admins," have all of the abilities and functionality of a regular user, but also have administrative privileges as well. Admins can perform functions such as creating and editing users, editing system wide settings, and have access to diagnostic and troubleshooting tools. In addition, admins can access all modules and records, and are not subject to group or role restrictions. All instances of Maax require at least one administrator, but it is also recommended to have more than one incase the original admin is for some reason unavailable or is no longer with the company.
+                        <br>
+                        System Administrators will appear in the Employees module.To create a System Administrator, please review the Regular And Admin Users section of this documentation.
+                        <br>
+                        <br>
+
+                         <b><h4>Creating Users</h4></b>
+                        <br>
+                       There are two methods for creating new users in MaaxFrame. These are via the users module, duplication. Creating users is an imperative function in MaaxFrame as it allows for other members of your organization to log in to MaaxFrame and access all of your customer data
+                        <br>
+                        <br>
+                        <ul>
+                        <li><b>Creating Via User Menu</b>
+                             <br>
+                        <br>
+                        <img src= "../assets/img/8.png" alt="Via Menu" align="middle"/>
+                        <br>
+                        <br>
+                        The most common method for creating new users is via the create new options in Users Menu. This will open an edit view screen where you can enter in all of the necessary information to create a new user.
+                         </li> 
+                         <br>
+                        <li><b>Creating Via Cloning</b>
+                            Maaxframe have a very imperative cloning functionality where you have to just click on clone button and all its attribute like role, groups, permission etc from the record you are cloning.
+                        if you want to clone a user click on the user you want to clone.
+                        Click on clone under more
+                             <br>
+                        <br>
+                        <img src= "../assets/img/9.png" alt="Via Cloning" align="middle"/>
+                        <br>
+                        <br>
+                        The record will be cloned with all its attribute you can change its attribute according to your need and there you go you have just set up a user.
+                        <img src= "../assets/img/10.png" alt="clone" align="middle"/>
+                        <br>
+                        <br>
+                        </li>
+                    </ul>
+                    <br>
+
+                        <b><h4>Regular and Admin Users</h4></b>
+                        <br>
+                        <img src= "../assets/img/11.png" alt="Admin" align="middle"/>
+                        <br>
+                        <br>
+                        Regular and Admin users are the most common users that will be created in a Maax instance and contain the most detail and fields compared to the other user types. For more information about the use of Regular and Admin users, please review the Regular User and System Administrator sections of this documentation.
+                        <br>
+                        <br>
+                        To create a new user, follow these steps:
+                        <br>
+                        <br>
+                        <ul>
+                            <li>
+                        Navigate to Access Control > Users.</li>
+                        
+                        <li>
+                        Click on create option for the User.</li>
+                        
+                        <li>
+                        Enter appropriate values for the fields in the edit view layout. All required fields are marked with a red asterisk and must be completed prior to saving.</li>
+                        </ul>
+                        <br>
+                        <ul>
+
+                        Enter the following information under the User Profile tab:
+                        <br>
+                        <br>
+                        <ul>
+                            <li>
+                                In "User Profile" enter a username for this user which will define the specific user in Maaxframe and should be unique for every user. MaaxFrame will set user default to being Active User.
+
+                            </li>
+                            <li>
+                                In "User Information", contact information and other specific information about the user can be added. This will include phone numbers, contact address, the user's department and job title, and any description information.
+                            </li>
+                            <li>
+                                To give the menu permissions you have to assign specific roles. MaaxFrame provide some pre-configured organizational roles. 
+                            </li>
+                        </ul>
+
+         
+                       </section>
+
+
+                            <!-- Roles
+                    ================================================== -->
+                     <section id="Roles">
+                        <div class="page-header">
+                            <h1>Roles</h1>
+                        </div>
+                        <b><h4>Overview</h4></b>
+                       <br>MaaxFrame Roles define permissions for users such as what kinds of records they can access and what level of access they are allowed. Roles work in conjunction with groups to form a robust security model for non-admin users in MaaxFrame. Roles control three different layers of access for users within MaaxFrame: module, field, and action-level access.
+                        <br>
+                        <br>
+                        <img src= "../assets/img/7.png" alt="Roles" align="middle"/>
+                        <br>
+                        <br>
+                       <br>
+                       Administrators have the ability to create different roles and assign regular users to the roles. A user can be associated to any number of roles, and when multiple roles are applied, MaaxFrame adheres to a most-restrictive policy to determine the user's appropriate access levels. Administrators cannot be associated to roles as their administrative rights supersede any restrictions imposed by Role Management. For more information on System Administrator users, please review the User Management documentation.
+                       
+                        <br>
+                        <br>
+
+                        <b><h4>Roles Modules Tab</h4></b>
+                        <br>
+                        The Roles module tab is accessed by navigating to the Admin menu and clicking "Role Management" within the Users panel. Clicking the link will open the Roles module where you will see the tree view of the  Roles. You can define the roles in hierarchical structure as per your organization
+                        <br>
+                        <br>
+
+
+                        <b><h4>Creating Roles</h4></b>
+                        <br>
+                       There are three methods that can be used to create roles in MaaxFrame: via the Create Role option, by Cloning then editing an existing role or by adding directly via tree actions . After initially creating the role, the administrator will need to set the necessary module and field permissions, and assign users to the role. 
+                        <br>
+                        <br>
+                        <ul>
+                        <li><b>Creating Roles Via Roles Menu</b>
+                       The most common way to create a role is via the Create Role option in the Role Management module tab. This opens up the edit view layout which allows you to enter in all the relevant information for the role.
+                         </li> 
+                         <br>
+                         Use the following steps to create a role via Role Management:
+                         <br>
+                        <br>
+                         <ul>
+                            <li>
+                               Navigate to the Settings -> Access Controls -> Roles.
+                                </li>
+                            <li>
+                                The Roles tree view will open, displaying any existing roles that are currently available.
+                            </li>
+                               <br>
+                        <br>
+                        <img src= "../assets/img/23.png" alt="Via Menu" align="middle"/>
+                        <br>
+                        <br>
+                            <li>
+                                You will be presented with an edit view screen where you will need to enter a name and description of the role you are creating. Once this is complete, click "Save".
+                            </li>
+                            <li>
+                                On the role chart screen, configure the module and field permissions, and assign users to the role.
+                            </li>
+                        </ul>
+
+                         <br>
+                        <li><b>Creating Roles Via Cloning</b>
+                       You can also create a new role by duplicating an existing role. The duplicate option is useful if the role you are creating has similar information to an existing role.
+                        <br>
+                       Use the following steps to create a role by duplicating an existing record:
+                       <br>
+                       <br>
+                        <ul>
+                            <li>
+                               Navigate to a role record's form view
+                            </li>
+                            <li>
+                               Click the More menu and select "Clone"
+                                  <br>
+                        <br>
+                        <img src= "../assets/img/24.png" alt="Via Menu" align="middle"/>
+                        <br>
+                        <br>
+                            </li>
+                            <li>
+                               The displayed edit view is pre-populated with the original role's values. Update the necessary fields, then click "Save"
+                            </li>
+                            <li>
+                               On the role chart screen, update the module and field permissions, and assign users to the role.
+                            </li>
+                        </ul>
+                    </li>
+
+                    </ul>
+                    <br>
+
+         
+                       </section>
+
+                              <!-- User Module
+                    ================================================== -->
+                    <section id="Groups">
+                        <div class="page-header">
+                            <h1>Group Management</h1>
+                        </div>
+                        <b><h4>Overview</h4></b>
+                       <br>Group Management is used in MaaxFrame to define permissions and groupings for users. These permissions cover what records a user is and is not able to access. Group are used in conjunction with Roles to form a robust security model for non-admin users in MaaxFrame. Users can use Group settings on specific records to allow different users within MaaxFrame the option to view these given records. Group settings can also be used as a form of organization, thereby separating records to be associated to specific Groups for better tracking. Group can be based on departments, geographic regions, or whatever else works best in a given organization
+                       
+                        <br>
+                        <br>
+
+                        <b><h4>Group Menu</h4></b>
+                        <br>
+                        The Group menu is accessed by navigating to the Settings -> Access Control and clicking on Group. Clicking on the Group menu link will bring you to the Group list view. The Actions menu allows you to perform important actions within the module.
+                           <br>
+                        <br>
+                        <img src= "../assets/img/14.png" alt="Group Menu" align="middle"/>
+                        <br>
+                        <br>
+                       
+                        These groups are bind in parent-child relationship and any group can have a parent group from which it inherits its properties you can configure the relationship either from the group form or from the lookup “group contains group”.
+                           <br>
+                        <br>
+                        <img src= "../assets/img/15.png" alt="Group" align="middle"/>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+
+                        <b><h4>Group Membership Types</h4></b>
+                        <br>
+                        Group memberships are given to users in one of two ways, either by explicit or implicit membership. Regardless of the type, membership will control what records regular users are able to see. Each membership can be granted in different ways and can constitute different functionality. You can explicitly add a group to a user by opening the user in view mode  and in related information tab you can add a data group 
+                           <br>
+                        <br>
+                        <img src= "../assets/img/18.png" alt="Group" align="middle"/>
+                        <br>
+                        <br>
+                        <br>
+                        if the “Is Primary Acl Group” is marked then it will only be able to access the record from that group. 
+                        <br>
+                        Implicit group membership is used for record visibility. Implicit membership relies on the "Reports To" field in the User Profile. When one user reports to another, the hierarchy of the "Reports To" field is kept in tact. The user being reported to will inherit the group membership of the subordinate user and be able to see any records on both his or her own group, and the groups of which the subordinate user is a member . The subordinate's groups can either be explicit or implicit groups in this scenario.
+                           <br>
+                        <br>
+                        <img src= "../assets/img/19.png" alt="Group" align="middle"/>
+                        <br>
+                        <br>
+                        <br>
+                        MaaxFrame gives you 3 level for Data Access. Read Access, Edit Access, Delete Access you can particular group, user and role to a particular record to give that particular entity either read, edit or delete access.  So when you give the read access to a particular group say group 1 only the user associated with the group 1 can only read the record.
+                        <br>
+                        <br>
+
+                         <b><h4>Creating Groups</h4></b>
+                        <br>
+                         There are two methods that can be used to create groups in MaaxFrame. These are via the groups module tab's action list or by duplicating an existing group and then editing it. After initially creating the group, the administrator will need to associate users to the newly created group.
+                            <br>
+                        <br>
+                        <img src= "../assets/img/20.png" alt="Via Menu" align="middle"/>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <ul>
+                        <li><b>Creating Via Groups Module </b>
+                       The most common way to create a new group is via the Create group option in the group Management module tab. This opens up the edit view layout which allows you to enter in all the relevant information for the group.
+
+                         </li> 
+                         <br>
+                         Use the following steps to create a group via group Management:
+                         <br>
+                        <br>
+                         <ul>
+                            <li>
+                                Navigate to Settings ->Access Control -> Groups.
+                                </li>
+                            <li>
+                                Click on create new.
+                            </li>
+                            <li>
+                                Enter the required information.
+                            </li>
+                            <li>
+                                You can refer to the image shown above.
+                            </li>
+
+                            <li>
+                                To add a parent or child group related to that particular group navigate to GROUPS tab and  enter the required group.
+                            </li>
+                               <br>
+                        <br>
+                        <img src= "../assets/img/21.png" alt="Via Groups" align="middle"/>
+                        <br>
+                        <br>
+                        </ul>
+
+                        <br>
+                        <li><b>Creating Via Cloning</b>
+                       You can also create a new Group by duplicating an existing Group. The Clone option is useful if the Group you are creating has a similar set of members or a similar description to an existing group
+                        <br>
+                       Use the following steps to create a group by duplicating an existing record:
+                       <br>
+                       <br>
+                        <ul>
+                            <li>
+                                Navigate to a group record's detail view.
+                            </li>
+                            <li>
+                                Click the More menu and select "Clone".
+
+                            </li>
+                               <br>
+                        <br>
+                        <img src= "../assets/img/22.png" alt="Via Menu" align="middle"/>
+                        <br>
+                        <br>
+                            <li>
+                                The displayed edit view is pre-populated with the original group's values. Update the name field, and description if need be, then click "Save"
+                            </li>
+                            <li>
+                                On the group's detail view, add any users that are members of this group that are not on the original group, and remove any unwanted users.
+                            </li>
+                        </ul>
+                    </ul>
+                    </li>
+                    <br>
+                    <br>
+                            <b><h4>Setting Menu Permissions</h4></b>
+                       Maaxframe gives you fine grained ability to control menu permission. These menu permission are based on roles. Maaxframe gives you ability to not only control the menu access but also every action related to that menu and on the forms of that menu. So now you can give different access to different roles depending on their responsibilities by just clicking on the check boxes for the permission related to that role.
+                        <br>
+                       There are 3 menus
+                       <br>
+                       <br>
+                        <ul>
+                            <li>
+                                App-Menu: App menu have all the menu that appears on the top nav bar.
+                            </li>
+                            <li>
+                                Widgets-Menu: Widgets menu corresponds to the lookups, reports, list-views and has many relation menu
+                            </li>
+                            <li>
+                               User-menu: This is the menu which appear on the top right corner where you see the user-name and the logout action button.
+
+                            </li>
+                        </ul>
+                    <br>
+
+         
+                       </section>
+
+
+
+
+
+
+        <!-- Footer
+        ================================================== -->
+        <footer class="footer">
+            <div class="container">
+                <p>© MaaxFrame Inc. 2013 onwards - All rights reserved</p>
+            </div>
+        </footer>
+
+
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <script src="../assets/js/jquery.js"></script>
+        <script src="../assets/js/bootstrap-transition.js"></script>
+        <script src="../assets/js/bootstrap-alert.js"></script>
+        <script src="../assets/js/bootstrap-modal.js"></script>
+        <script src="../assets/js/bootstrap-dropdown.js"></script>
+        <script src="../assets/js/bootstrap-scrollspy.js"></script>
+        <script src="../assets/js/bootstrap-tab.js"></script>
+        <script src="../assets/js/bootstrap-tooltip.js"></script>
+        <script src="../assets/js/bootstrap-popover.js"></script>
+        <script src="../assets/js/bootstrap-button.js"></script>
+        <script src="../assets/js/bootstrap-collapse.js"></script>
+        <script src="../assets/js/bootstrap-carousel.js"></script>
+        <script src="../assets/js/bootstrap-typeahead.js"></script>
+        <script src="../assets/js/bootstrap-affix.js"></script>
+        <script src="../assets/js/bootbox.min.js"></script>
+        <script src="../assets/js/holder.js"></script>
+        <script src="../assets/js/prettify.js"></script>
+
+        <script src="../assets/js/application.js"></script>
+
+
+        <!-- Analytics
+        ================================================== -->
+        <script>
+            var _gauges = _gauges || [];
+            (function() {
+                var t = document.createElement('script');
+                t.type = 'text/javascript';
+                t.async = true;
+                t.id = 'gauges-tracker';
+                t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+                t.src = '//secure.gaug.es/track.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(t, s);
+            })();
+                
+                      
+        </script>
+        <script>$(document).ready(function () {
+            $('label.tree-toggler').click(function () {
+                $(this).parent().children('ul.tree').toggle(300);
+            });
+        });
+        $(document).ready(function () {
+            $('label.tree-toggler').parent().children('ul.tree').toggle(300);
+        });</script>
+
+    </body>
+</html>
